@@ -1,0 +1,26 @@
+.addpeople {
+  display: flex;
+  justify-content: space-around;
+
+  .addpeople_inputs {
+    input {
+      height: 30px;
+      text-align: center;
+    }
+    .addpeople_inputs_title {
+      text-align: center;
+    }
+  }
+
+  .addpeople_choosedate {
+    align-self: flex-end;
+    input {
+      height: 30px;
+      text-align: center;
+    }
+  }
+
+  .addpeople_choosedate {
+    text-align: center;
+  }
+}
