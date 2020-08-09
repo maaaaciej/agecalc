@@ -4,7 +4,7 @@ import "./header.styles.scss";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div id="header">
       <h2 className="header_title">Age Tracker</h2>
       <h3>
         Made by <a href="https://github.com/maaaaciej">Maciej Ostrowski</a>
