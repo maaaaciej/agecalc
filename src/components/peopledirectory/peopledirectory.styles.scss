@@ -1,0 +1,15 @@
+.peopledirectory {
+  margin-top: 2%;
+  width: 100%;
+  text-align: center;
+
+  .peopledirectory_table {
+    table {
+      text-align: center;
+      width: 100%;
+      th {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
