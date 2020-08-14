@@ -3,7 +3,7 @@ import React from "react";
 import "./peopledirectory.styles.scss";
 
 const PeopleDirectory = (props) => {
-  const { people, date } = props;
+  const { people, date, handleDeletePerson } = props;
 
   const handleCalculateAge = (dob, date) => {
     console.log(date);

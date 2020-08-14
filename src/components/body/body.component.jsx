@@ -33,6 +33,17 @@ class Body extends React.Component {
     this.setState({ birthday: event.target.value });
   };
 
+  // handleDeletePerson = (event) => {
+  //   const newArr = [...this.state.people];
+  //   console.log(newArr);
+  //   const personIndex = newArr.indexOf(event.target.value);
+  //   console.log(personIndex);
+  //   if (personIndex !== -1) {
+  //     newArr.splice(personIndex, 1);
+  //     this.setState({ people: newArr });
+  //   }
+  // };
+
   render() {
     return (
       <div className="body">
@@ -45,10 +56,13 @@ class Body extends React.Component {
           handleAddPerson={this.handleAddPerson}
           handleSetDate={this.handleSetDate}
         />
-        <PeopleDirectory people={this.state.people} date={this.state.date} />
+        <PeopleDirectory
+          people={this.state.people}
+          date={this.state.date}
+          // handleDeletePerson={this.handleDeletePerson}
+        />
       </div>
     );
   }
 }
-
 export default Body;
