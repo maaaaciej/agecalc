@@ -5,9 +5,11 @@ const AddPeople = (props) => {
   const {
     name,
     birthday,
+    date,
     handleNameChange,
     handleBirtdayChange,
     handleAddPerson,
+    handleSetDate,
   } = props;
   console.log(props);
   return (
@@ -30,7 +32,7 @@ const AddPeople = (props) => {
       </div>
       <div className="addpeople_choosedate">
         <h4 className="addpeople_choosedate_title">Choose Date</h4>
-        <input type="date" />
+        <input type="date" value={date} onChange={handleSetDate} />
       </div>
     </div>
   );

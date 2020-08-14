@@ -7,8 +7,13 @@ import "./body.styles.scss";
 class Body extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { people: [], name: "", birthday: "" };
+    this.state = { people: [], name: "", birthday: "", date: "2020-08-10" };
   }
+  handleSetDate = (date) => {
+    this.setState({
+      date: date.target.value,
+    });
+  };
   handleAddPerson = (event) => {
     event.preventDefault();
     this.setState({
@@ -27,6 +32,7 @@ class Body extends React.Component {
   handleBirthdayChange = (event) => {
     this.setState({ birthday: event.target.value });
   };
+
   render() {
     return (
       <div className="body">
@@ -35,9 +41,11 @@ class Body extends React.Component {
           handleNameChange={this.handleNameChange}
           name={this.state.name}
           birthday={this.state.birthday}
+          date={this.state.date}
           handleAddPerson={this.handleAddPerson}
+          handleSetDate={this.handleSetDate}
         />
-        <PeopleDirectory people={this.state.people} />
+        <PeopleDirectory people={this.state.people} date={this.state.date} />
       </div>
     );
   }
